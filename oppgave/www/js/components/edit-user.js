@@ -10,31 +10,30 @@ class EditUser extends LitElement {
 render() {
     return html`
     <head>
-      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     </head>
-    <form onsubmit="javascript: return false;" id="userForm" method="POST">
-    <div class="form-group pt-3 ml-5" style="width: 20rem;">
+    <form id="userForm" method="POST">
+    <div>
       <label for="email">Email</label>
-      <input class="form-control" id="uname" name="uname" type="text" value="${this.user.uname}" required>
+      <input id="uname" name="uname" type="text" value="${this.user.uname}" required>
       <input type="hidden" id="uid" name="uid" value="${this.user.uid}">
     </div>
-    <div class="form-group pt-1 ml-5" style="width: 20rem;">
+    <div>
       <label for="firstName">First Name</label>
-      <input class="form-control" id="firstName" name="firstName" type="text" value="${this.user.firstName}" required>
+      <input id="firstName" name="firstName" type="text" value="${this.user.firstName}" required>
     </div>
-    <div class="form-group pt-1 ml-5" style="width: 20rem;">
+    <div>
       <label for="lastName">Last Name</label>
-      <input class="form-control" id="lastName" name="lastName" type="text" value="${this.user.lastName}" required>
+      <input id="lastName" name="lastName" type="text" value="${this.user.lastName}" required>
     </div>
-    <div class="form-group pt-1 ml-5" style="width: 20rem;">
+    <div>
       <label for="oldpwd">Old Password</label>
-      <input type="password" class="form-control" id="oldpwd" name="oldpwd" type="text" value="">
+      <input type="password" id="oldpwd" name="oldpwd" type="text" value="">
     </div>
-    <div class="form-group pt-1 ml-5" style="width: 20rem;">
+    <div>
       <label for="newpwd">New Password</label>
-      <input type="password" class="form-control" id="pwd" name="pwd" type="text" value="">
+      <input type="password" id="pwd" name="pwd" type="text" value="">
   </div>
-  <input type="submit" @click=${this.updateUser} id="submitForm" name="editUser" class="btn btn-info mt-4 ml-2" value="Edit User"></input>
+  <input type="submit" @click=${this.updateUser} id="submitForm" name="editUser" value="Edit User"></input>
 </form>
     `;
   }
