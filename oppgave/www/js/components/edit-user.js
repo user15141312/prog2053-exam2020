@@ -57,6 +57,4 @@ render() {
       })
   }
 }
-
-}
 customElements.define('edit-user', EditUser);
