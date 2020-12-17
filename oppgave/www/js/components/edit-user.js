@@ -6,6 +6,7 @@ class EditUser extends LitElement {
       user: { type: Object }
     };
   }
+//render the page
 render() {
     return html`
     <head>
@@ -38,9 +39,9 @@ render() {
     `;
   }
 
-  //updates the information about a user
+  //updating information about a specific user account
   updateUser(e) {
-    //data from the HTML form
+    //retrieving data from the html form
     const dataForm = new FormData(e.target.form);
     console.log(e)
     fetch('api/updateUser.php', {
