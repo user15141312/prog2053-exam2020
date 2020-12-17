@@ -49,7 +49,14 @@ render() {
      body: dataForm
     }).then(res=>res.json())
       .then(data=>{
+      if (data.status=='fail') {
+            console.log("The user was updated");
+        } else {
+            console.log("The user was not updated");
+        }
       })
   }
 }
 customElements.define('edit-user', EditUser);
+
+  }
