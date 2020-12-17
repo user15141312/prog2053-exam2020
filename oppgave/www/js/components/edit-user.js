@@ -48,7 +48,7 @@ render() {
      body: dataForm
     }).then(res=>res.json())
       .then(data=>{
-      if (data.status=='fail') {
+      if (data.status=='success') {
             console.log("The user was updated");
         } else {
             console.log("The user was not updated");
