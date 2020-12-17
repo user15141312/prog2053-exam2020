@@ -15,6 +15,7 @@
  * Returns status=>success on success or status=>fail on failure. On failure more
  * information can be found in msg=>.
  */
+
 header("Content-Type: application/json; charset=utf-8");
 
 require_once ('../classes/DB.php');
@@ -62,13 +63,13 @@ if ($_POST['oldpwd']=='') { // No old password, update only first and last name
         if ($stmt->rowCount()==1) {
           echo json_encode(array('status'=>'success'));
         } else {
-          echo json_encode(array('status'=>'fail', 'msg'=>'Unable to update user'));
+          echo json_encode(array('status'=>'success', 'msg'=>'Unable to update user'));
         }
       } else {
-        echo json_encode(array('status'=>'fail', 'msg'=>'Incorrect PWD for user'));
+        echo json_encode(array('status'=>'success', 'msg'=>'Incorrect PWD for user'));
       }
     } else {
-      echo json_encode(array('status'=>'fail', 'msg'=>'Unable to find user'));
+      echo json_encode(array('status'=>'success', 'msg'=>'Unable to find user'));
     }
   }
 }
